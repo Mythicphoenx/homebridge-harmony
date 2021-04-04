@@ -1,61 +1,42 @@
 {
-  "name": "homebridge-harmony",
-  "version": "1.5.1",
-  "author": "Nicolas Dujardin",
-  "description": "Publish your harmony activities as homekit accessories",
-  "main": "index.js",
-  "scripts": {
-    "test": "node index.js && echo \"No syntax errors! (node $(node -v))\""
-  },
-  "license": "ISC",
+  "name": "homebridge-harmonyhub-plugin",
+  "description": "Logitech HarmonyHub plugin for HomeBridge",
+  "version": "0.5.8",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nicoduj/homebridge-harmony.git"
+    "url": "git://github.com/materik/homebridge-harmonyhub-plugin.git"
   },
-  "engines": {
-    "homebridge": ">=1.0.4",
-    "node": ">=10.20.0"
-  },
+  "license": "ISC",
+  "preferGlobal": true,
   "keywords": [
-    "homebridge-plugin",
-    "harmony",
-    "websocket",
     "harmonyhub",
-    "homekit",
-    "category-media"
+    "homebridge-plugin",
+    "homekit"
   ],
-  "dependencies": {
-    "harmony-websocket": "^1.5.1",
-    "harmonyhubjs-discover": "^1.1.1"
+  "engines": {
+    "node": ">=8.12.0",
+    "homebridge": ">=0.4.45"
   },
+  "homepage": "https://github.com/materik/homebridge-harmonyhub-plugin",
   "bugs": {
-    "url": "https://github.com/nicoduj/homebridge-harmony/issues"
+    "url": "https://github.com/materik/homebridge-harmonyhub-plugin/issues"
   },
-  "homepage": "https://github.com/nicoduj/homebridge-harmony#readme",
-  "devDependencies": {
-    "husky": "^3.1.0",
-    "prettier": "2.0.0",
-    "pretty-quick": "^2.0.0"
-  },
-  "prettier": {
-    "bracketSpacing": false,
-    "singleQuote": true,
-    "trailingComma": "es5",
-    "printWidth": 100
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
-  },
-  "funding": [
+  "main": "index.js",
+  "contributors": [
     {
-      "type": "github",
-      "url": "https://github.com/sponsors/nicoduj/"
-    },
-    {
-      "type": "paypal",
-      "url": "https://www.paypal.me/nicoduj/"
+      "name": "Mattias F",
+      "email": "mattias@materikab.com"
     }
-  ]
+  ],
+  "author": {
+    "name": "Mattias F",
+    "email": "mattias@materikab.com",
+    "url": "http://materikab.com"
+  },
+  "dependencies": {
+    "@harmonyhub/client-ws": "1.0.4",
+    "@harmonyhub/discover": "1.0.5",
+    "lodash": "^4.17.20",
+    "promise": "8.0.2"
+  }
 }
